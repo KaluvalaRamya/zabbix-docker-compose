@@ -3,7 +3,7 @@
 cp docker-compose_v3_alpine_mysql_latest.yaml docker-compose_v3_alpine_mysql_500.yaml
 
 # replace latest with 4.0.1
-sed -i "s/-4.0-latest/-4.0.1/" docker-compose_v3_alpine_mysql_500.yaml
+sed -i "s/-5.0-latest/-5.0.0/" docker-compose_v3_alpine_mysql_500.yaml
 
 docker-compose -f ./docker-compose_v3_alpine_mysql_500.yaml up -d
 docker ps -f "name=zabbix"
